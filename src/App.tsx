@@ -16,6 +16,9 @@ const useStyles = makeStyles((theme) => ({
   main: {
     marginBottom: theme.spacing(2),
   },
+  header: {
+    height: "100vh",
+  },
   footer: {
     padding: theme.spacing(3, 2),
     marginTop: "auto",
@@ -32,7 +35,7 @@ export const App = () => {
     <>
       <CssBaseline />
       <div className={classes.root}>
-        <Header />
+        <Header classes={classes} />
         <Home classes={classes} />
         <BackToTop />
         <Footer classes={classes} />

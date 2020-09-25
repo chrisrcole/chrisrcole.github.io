@@ -7,13 +7,6 @@ export const Home = (props: any) => {
   const { classes } = props;
   return (
     <Container component="main" className={classes.main}>
-      <Container maxWidth="sm">
-        <Box my={4}>
-          <Typography variant="h4" component="h1" gutterBottom>
-            Create React App v4-beta example
-          </Typography>
-        </Box>
-      </Container>
       <Container>
         <Box my={2}>
           {[...new Array(102)]
