@@ -1,9 +1,9 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Container from "@material-ui/core/Container";
 import CssBaseline from "@material-ui/core/CssBaseline";
 
 import { Home } from "./components/home";
+import BackToTop from "./components/navigation/BackToTop";
 import { Header } from "./components/header";
 import { Footer } from "./components/footer";
 
@@ -34,6 +34,7 @@ export const App = () => {
       <div className={classes.root}>
         <Header />
         <Home classes={classes} />
+        <BackToTop />
         <Footer classes={classes} />
       </div>
     </>

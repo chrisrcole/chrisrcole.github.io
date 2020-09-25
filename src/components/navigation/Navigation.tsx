@@ -60,7 +60,7 @@ export const Navigation = (props: Props) => {
           </Toolbar>
         </AppBar>
       </ElevationScroll>
-      <Toolbar />
+      <Toolbar id="back-to-top-anchor" />
     </>
   );
 };
