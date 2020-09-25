@@ -1,6 +1,7 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
+import Container from "@material-ui/core/Container";
 
 interface footerProps {
   date: number;
@@ -20,10 +21,13 @@ function Copyright(props: footerProps) {
   );
 }
 
-export const Footer = () => {
+export const Footer = (props: any) => {
+  const { classes } = props;
   return (
-    <footer>
-      <Copyright date={new Date().getFullYear()} />
+    <footer className={classes.footer}>
+      <Container maxWidth="sm">
+        <Copyright date={new Date().getFullYear()} />
+      </Container>
     </footer>
   );
 };

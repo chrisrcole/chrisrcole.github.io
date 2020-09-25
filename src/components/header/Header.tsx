@@ -1,9 +1,10 @@
 import React from "react";
+import { Navigation } from "../navigation";
 
-export const Header = () => {
+export const Header = (props: any) => {
   return (
     <header>
-      <h1>Header</h1>
+      <Navigation {...props} />
     </header>
   );
 };
