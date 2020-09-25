@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-function ElevationScroll(props: Props) {
+function OpaqueScroll(props: Props) {
   const { children } = props;
 
   const trigger = useScrollTrigger({
@@ -36,6 +36,7 @@ function ElevationScroll(props: Props) {
 
   return React.cloneElement(children, {
     elevation: trigger ? 4 : 0,
+    color: trigger ? "primary" : "transparent",
   });
 }
 
@@ -43,7 +44,7 @@ export const Navigation = (props: Props) => {
   const classes = useStyles();
   return (
     <>
-      <ElevationScroll {...props}>
+      <OpaqueScroll {...props}>
         <AppBar>
           <Toolbar>
             <IconButton
@@ -59,7 +60,7 @@ export const Navigation = (props: Props) => {
             </Typography>
           </Toolbar>
         </AppBar>
-      </ElevationScroll>
+      </OpaqueScroll>
       <Toolbar id="back-to-top-anchor" />
     </>
   );
