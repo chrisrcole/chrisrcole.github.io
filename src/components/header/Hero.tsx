@@ -5,10 +5,11 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
+import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles((theme) => ({
   hero: {
-    paddingTop: theme.spacing(25),
+    paddingTop: theme.spacing(16),
     height: "100vh",
   },
   root: {
@@ -44,6 +45,11 @@ export const Hero = () => {
             I'm a software engineer based in Houston, TX (yeehaw) who loves
             building websites, applications, and everything in between.
           </Typography>
+        </Grid>
+        <Grid item xs={12}>
+          <Button color="secondary" variant="outlined" href="#contact">
+            Let's Talk!
+          </Button>
         </Grid>
       </Grid>
     </Container>
