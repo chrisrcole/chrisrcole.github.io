@@ -1,6 +1,6 @@
 import React from "react";
 
-import logo from "../../logo.svg";
+import logo from "../../assets/images/logos/logo-short.svg";
 
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
