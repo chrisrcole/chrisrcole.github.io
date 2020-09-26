@@ -7,7 +7,7 @@ export const theme = responsiveFontSizes(
     palette: {
       type: "dark",
       primary: {
-        main: "#263238",
+        main: "#0a192f",
       },
       secondary: {
         main: "#1ed4a9",

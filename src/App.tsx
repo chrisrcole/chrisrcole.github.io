@@ -6,6 +6,7 @@ import { Home } from "./components/home";
 import BackToTop from "./components/navigation/BackToTop";
 import { Header } from "./components/header";
 import { Footer } from "./components/footer";
+import Container from "@material-ui/core/Container";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -18,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(2),
   },
   header: {
-    height: "100vh",
+    // height: "100vh",
   },
   footer: {
     padding: theme.spacing(3, 2),
@@ -33,7 +34,10 @@ export const App = () => {
       <CssBaseline />
       <div className={classes.root}>
         <Header classes={classes} />
-        <Home classes={classes} />
+        <Container maxWidth="lg">
+          <Home classes={classes} />
+        </Container>
+
         <BackToTop />
         <Footer classes={classes} />
       </div>

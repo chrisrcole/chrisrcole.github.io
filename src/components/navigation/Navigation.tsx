@@ -32,7 +32,10 @@ const useStyles = makeStyles((theme: Theme) =>
       width: 64,
     },
     nav: {
-      marginTop: 10,
+      paddingTop: 10,
+    },
+    navLinks: {
+      marginRight: 10,
     },
   })
 );
@@ -69,12 +72,12 @@ export const Navigation = (props: Props) => {
     <>
       {/* <OpaqueScroll {...props}> */}
       <HideOnScroll {...props}>
-        <AppBar color="transparent" elevation={0} className={classes.nav}>
+        <AppBar color="primary" elevation={0} className={classes.nav}>
           <Toolbar>
             <div className={classes.title}>
               <img src={logo} alt="logo" className={classes.logo} />
             </div>
-            <>
+            <div className={classes.navLinks}>
               {links.map((link: any, i) => (
                 <Button href={link.path}>
                   <div>
@@ -82,11 +85,13 @@ export const Navigation = (props: Props) => {
                       {/* {"[ " + i + " ]"} */}
                       {(i + 1).toString().padStart(2, "0") + ". "}
                     </Typography>{" "}
-                    <Typography variant="button">{link.title}</Typography>
+                    <Typography variant="button" color="textSecondary">
+                      {link.title}
+                    </Typography>
                   </div>
                 </Button>
               ))}
-            </>
+            </div>
             <Button color="secondary" variant="outlined">
               Resume
             </Button>

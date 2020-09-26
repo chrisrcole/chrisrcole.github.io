@@ -11,14 +11,22 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: theme.spacing(25),
     height: "100vh",
   },
+  root: {
+    flexGrow: 1,
+  },
+  paper: {
+    padding: theme.spacing(2),
+    textAlign: "center",
+    color: theme.palette.text.secondary,
+  },
 }));
 
 export const Hero = () => {
   const classes = useStyles();
   return (
-    <Container maxWidth="md" className={classes.hero}>
-      <Grid container spacing={1}>
-        <Grid item xs={6}>
+    <Container className={classes.hero}>
+      <Grid container spacing={2}>
+        <Grid item xs={12}>
           <Typography variant="h6" color="secondary">
             Hi, my name is
           </Typography>
@@ -31,7 +39,7 @@ export const Hero = () => {
             I'm a Software Engineer.
           </Typography>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12} sm={6}>
           <Typography variant="subtitle1" color="textSecondary">
             I'm a software engineer based in Houston, TX (yeehaw) who loves
             building exceptional websites, applications, and everything in
