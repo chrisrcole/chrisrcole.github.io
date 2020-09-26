@@ -3,26 +3,42 @@ import Box from "@material-ui/core/Box";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
+import Grid from "@material-ui/core/Grid";
+import Paper from "@material-ui/core/Paper";
 
 const useStyles = makeStyles((theme) => ({
   hero: {
-    paddingTop: theme.spacing(2),
+    paddingTop: theme.spacing(25),
+    height: "100vh",
   },
 }));
-
-const words = ["Learn.", "Build.", "Master."];
 
 export const Hero = () => {
   const classes = useStyles();
   return (
     <Container maxWidth="md" className={classes.hero}>
-      <Box my={4}>
-        {words.map((word) => (
-          <Typography variant="h1" component="h1" gutterBottom>
-            {word}
+      <Grid container spacing={1}>
+        <Grid item xs={6}>
+          <Typography variant="h6" color="secondary">
+            Hi, my name is
           </Typography>
-        ))}
-      </Box>
+        </Grid>
+        <Grid item xs={12}>
+          <Typography variant="h2">Chris Cole.</Typography>
+        </Grid>
+        <Grid item xs={12}>
+          <Typography variant="h2" color="textSecondary">
+            I'm a Software Engineer.
+          </Typography>
+        </Grid>
+        <Grid item xs={6}>
+          <Typography variant="subtitle1" color="textSecondary">
+            I'm a software engineer based in Houston, TX (yeehaw) who loves
+            building exceptional websites, applications, and everything in
+            between.
+          </Typography>
+        </Grid>
+      </Grid>
     </Container>
   );
 };
