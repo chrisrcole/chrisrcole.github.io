@@ -16,8 +16,9 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import MenuIcon from "@material-ui/icons/Menu";
 import Button from "@material-ui/core/Button";
-
 import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
+
+import { Link } from "react-scroll";
 
 const links = [
   { title: "About", path: "#about" },
@@ -81,10 +82,16 @@ function HideOnScroll(props: Props) {
   );
 }
 
-const NavItem = (props: { title: string; index: number }) => {
-  const { title, index } = props;
+const NavItem = (props: { title: string; path: string; index: number }) => {
+  const { title, path, index } = props;
   return (
-    <div>
+    <Link
+      activeClass="active"
+      to={path}
+      spy={true}
+      smooth={true}
+      duration={500}
+    >
       <Typography variant="button" color="secondary">
         {/* {"[ " + index + " ]"} */}
         {(index + 1).toString().padStart(2, "0") + ". "}
@@ -92,7 +99,7 @@ const NavItem = (props: { title: string; index: number }) => {
       <Typography variant="button" color="textSecondary">
         {title}
       </Typography>
-    </div>
+    </Link>
   );
 };
 
@@ -108,8 +115,8 @@ export const Navigation = (props: Props) => {
     <>
       <div className={classes.navLinks}>
         {links.map((link: any, index) => (
-          <Button key={link.path} href={link.path}>
-            <NavItem title={link.title} index={index} />
+          <Button key={link.path}>
+            <NavItem title={link.title} path={link.path} index={index} />
           </Button>
         ))}
         <Button href="#resume" color="secondary" variant="outlined">
@@ -125,9 +132,11 @@ export const Navigation = (props: Props) => {
       <Divider />
       <List>
         {links.map((link, index) => (
-          <ListItem button component={"a"} key={link.path} href={link.path}>
+          <ListItem button key={link.path} href={link.path}>
             <ListItemText
-              primary={<NavItem title={link.title} index={index} />}
+              primary={
+                <NavItem title={link.title} path={link.path} index={index} />
+              }
             />
           </ListItem>
         ))}
