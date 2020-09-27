@@ -90,7 +90,7 @@ const NavItem = (props: { title: string; path: string; index: number }) => {
       to={path}
       spy={true}
       smooth={true}
-      duration={500}
+      duration={700}
     >
       <Typography variant="button" color="secondary">
         {/* {"[ " + index + " ]"} */}
@@ -132,13 +132,31 @@ export const Navigation = (props: Props) => {
       <Divider />
       <List>
         {links.map((link, index) => (
-          <ListItem button key={link.path} href={link.path}>
-            <ListItemText
-              primary={
-                <NavItem title={link.title} path={link.path} index={index} />
-              }
-            />
-          </ListItem>
+          <div key={link.title}>
+            <Link
+              activeClass="active"
+              to={link.path}
+              spy={true}
+              smooth={true}
+              duration={700}
+            >
+              <ListItem button>
+                <ListItemText
+                  primary={
+                    <>
+                      <Typography variant="button" color="secondary">
+                        {/* {"[ " + index + " ]"} */}
+                        {(index + 1).toString().padStart(2, "0") + ". "}
+                      </Typography>{" "}
+                      <Typography variant="button" color="textSecondary">
+                        {link.title}
+                      </Typography>
+                    </>
+                  }
+                />
+              </ListItem>
+            </Link>
+          </div>
         ))}
         <ListItem button href="#resume">
           <Button href="#resume" color="secondary" variant="outlined">
