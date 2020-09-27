@@ -130,7 +130,7 @@ export const Navigation = (props: Props) => {
     <div>
       <div className={classes.toolbar} />
       <Divider />
-      <List>
+      <List component="nav">
         {links.map((link, index) => (
           <div key={link.title}>
             <Link
@@ -158,6 +158,7 @@ export const Navigation = (props: Props) => {
             </Link>
           </div>
         ))}
+        <Divider />
         <ListItem button href="#resume">
           <Button href="#resume" color="secondary" variant="outlined">
             Resume
