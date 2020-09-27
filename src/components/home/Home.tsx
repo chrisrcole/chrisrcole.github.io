@@ -1,9 +1,7 @@
 import React from "react";
 import Container from "@material-ui/core/Container";
-import Typography from "@material-ui/core/Typography";
-import Box from "@material-ui/core/Box";
 
-import { Hero } from "../header/Hero";
+import { Hero } from "../Hero/";
 
 export const Home = (props: any) => {
   const { classes } = props;

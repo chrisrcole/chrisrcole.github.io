@@ -11,21 +11,13 @@ import Divider from "@material-ui/core/Divider";
 import Drawer from "@material-ui/core/Drawer";
 import Hidden from "@material-ui/core/Hidden";
 import IconButton from "@material-ui/core/IconButton";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import MailIcon from "@material-ui/icons/Mail";
 import MenuIcon from "@material-ui/icons/Menu";
 import Button from "@material-ui/core/Button";
 
-import {
-  makeStyles,
-  useTheme,
-  Theme,
-  createStyles,
-} from "@material-ui/core/styles";
+import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
 
 const links = [
   { title: "About", path: "#about" },
@@ -116,7 +108,7 @@ export const Navigation = (props: Props) => {
     <>
       <div className={classes.navLinks}>
         {links.map((link: any, index) => (
-          <Button href={link.path}>
+          <Button key={link.path} href={link.path}>
             <NavItem title={link.title} index={index} />
           </Button>
         ))}
@@ -133,13 +125,13 @@ export const Navigation = (props: Props) => {
       <Divider />
       <List>
         {links.map((link, index) => (
-          <ListItem button component="a" href={link.path}>
+          <ListItem button component={"a"} key={link.path} href={link.path}>
             <ListItemText
               primary={<NavItem title={link.title} index={index} />}
             />
           </ListItem>
         ))}
-        <ListItem button component="a" href="#resume">
+        <ListItem button href="#resume">
           <Button href="#resume" color="secondary" variant="outlined">
             Resume
           </Button>
