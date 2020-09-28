@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "@material-ui/core/Container";
 
-import { Hero } from "../Hero/";
+import { Hero } from "../hero";
 import { About } from "../about";
 import { Experience } from "../experience";
 import { Work } from "../work";

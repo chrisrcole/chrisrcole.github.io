@@ -104,7 +104,7 @@ export const About = () => {
             </Grid>
           </Grid>
           <Grid item xs={12} sm={6}>
-            <Card className={classes.root}>
+            <Card className={classes.root} style={{ marginLeft: 20 }}>
               <CardActionArea>
                 <CardMedia
                   className={classes.media}
