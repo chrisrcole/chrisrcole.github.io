@@ -1,5 +1,4 @@
 import React from "react";
-import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
@@ -36,7 +35,7 @@ const techs = [
 export const About = () => {
   const classes = useStyles();
   return (
-    <Container id="#about" style={{ paddingTop: 85 }}>
+    <>
       <Grid container spacing={2}>
         <Grid item xs={12} sm={6}>
           <Typography
@@ -115,6 +114,6 @@ export const About = () => {
           </Grid>
         </Grid>
       </Grid>
-    </Container>
+    </>
   );
 };

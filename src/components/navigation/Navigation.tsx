@@ -42,6 +42,8 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     nav: {
       paddingTop: 10,
+      opacity: 0.9,
+      backdropFilter: "blur(6px)",
     },
     navLinks: {
       marginRight: 10,
@@ -92,13 +94,15 @@ const NavItem = (props: { title: string; path: string; index: number }) => {
       smooth={true}
       duration={700}
     >
-      <Typography variant="button" color="secondary">
-        {/* {"[ " + index + " ]"} */}
-        {(index + 1).toString().padStart(2, "0") + ". "}
-      </Typography>{" "}
-      <Typography variant="button" color="textSecondary">
-        {title}
-      </Typography>
+      <Button>
+        <Typography variant="button" color="secondary">
+          {/* {"[ " + index + " ]"} */}
+          {(index + 1).toString().padStart(2, "0") + ". "}
+        </Typography>{" "}
+        <Typography variant="button" color="textSecondary">
+          {title}
+        </Typography>
+      </Button>
     </Link>
   );
 };
@@ -115,11 +119,18 @@ export const Navigation = (props: Props) => {
     <>
       <div className={classes.navLinks}>
         {links.map((link: any, index) => (
-          <Button key={link.path}>
-            <NavItem title={link.title} path={link.path} index={index} />
-          </Button>
+          <NavItem
+            key={link.path}
+            title={link.title}
+            path={link.path}
+            index={index}
+          />
         ))}
-        <Button href="#resume" color="secondary" variant="outlined">
+        <Button
+          href={process.env.PUBLIC_URL + "/ChrisCole-Resume.pdf"}
+          color="secondary"
+          variant="outlined"
+        >
           Resume
         </Button>
       </div>
@@ -159,8 +170,12 @@ export const Navigation = (props: Props) => {
           </div>
         ))}
         <Divider />
-        <ListItem button href="#resume">
-          <Button href="#resume" color="secondary" variant="outlined">
+        <ListItem>
+          <Button
+            href={process.env.PUBLIC_URL + "/ChrisCole-Resume.pdf"}
+            color="secondary"
+            variant="outlined"
+          >
             Resume
           </Button>
         </ListItem>
