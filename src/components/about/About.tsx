@@ -38,20 +38,28 @@ export const About = () => {
   return (
     <Container id="#about" style={{ paddingTop: 85 }}>
       <Grid container spacing={2}>
-        <Grid item xs={12}>
-          <Typography variant="h3" component="h2" color="secondary">
+        <Grid item xs={12} sm={6}>
+          <Typography
+            variant="h4"
+            component="h2"
+            color="secondary"
+            style={{
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
             {/* {"[ " + index + " ]"} */}
             01.{" "}
             <Typography
-              variant="h3"
+              variant="h4"
               component="span"
               display={"inline"}
               color="textSecondary"
             >
               About Me
             </Typography>
-            <Divider />
           </Typography>
+          <Divider style={{ width: "100%" }} />
         </Grid>
         <Grid container className={classes.section}>
           <Grid item xs={12} sm={6}>
@@ -78,12 +86,16 @@ export const About = () => {
             <Grid container>
               {techs.map((tech) => (
                 <Grid key={tech} item xs={12} sm={6}>
-                  <ArrowRightIcon color="secondary" />
                   <Typography
                     variant="caption"
                     color="textSecondary"
                     gutterBottom
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                    }}
                   >
+                    <ArrowRightIcon color="secondary" />
                     {tech}
                   </Typography>
                 </Grid>
