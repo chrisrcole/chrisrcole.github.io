@@ -3,6 +3,8 @@ import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
 import Container from "@material-ui/core/Container";
 
+import { Credit } from "./Credit";
+
 interface footerProps {
   date: number;
 }
@@ -10,14 +12,13 @@ interface footerProps {
 function Copyright(props: footerProps) {
   const { date } = props;
   return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {"Copyright © "}
-      <Link color="inherit" href="https://cole-portfolio.com/">
-        Chris Cole
-      </Link>{" "}
-      {date}
-      {"."}
-    </Typography>
+    <>
+      <Typography variant="body2" color="textSecondary" align="center">
+        Chris Cole {date}
+        {"."}
+        <Credit />
+      </Typography>
+    </>
   );
 }
 
