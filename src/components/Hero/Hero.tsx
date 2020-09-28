@@ -57,13 +57,6 @@ export const Hero = () => {
           >
             Let's Talk!
           </Button>
-          <Button
-            href={`mailto:cccole3@gmail.com`}
-            color="secondary"
-            variant="outlined"
-          >
-            Let's Talk!
-          </Button>
         </Grid>
       </Grid>
       <div className={classes.down}>
