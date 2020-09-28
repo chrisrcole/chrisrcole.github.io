@@ -42,6 +42,7 @@ export const Contact = () => {
               component="span"
               display={"inline"}
               color="textSecondary"
+              style={{ marginLeft: 10 }}
             >
               What's Next?
             </Typography>

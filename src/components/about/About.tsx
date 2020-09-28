@@ -54,6 +54,7 @@ export const About = () => {
               component="span"
               display={"inline"}
               color="textSecondary"
+              style={{ marginLeft: 10 }}
             >
               About Me
             </Typography>
@@ -69,14 +70,15 @@ export const About = () => {
             <Typography variant="body1" color="textSecondary" gutterBottom>
               I enjoy creating things that live on the internet, whether that be
               websites, applications, or anything in between. My goal is to
-              always build products that provide pixel-perfect, performant
+              always build products that provide user-centered, performant
               experiences.
             </Typography>
             <br></br>
             <Typography variant="body1" color="textSecondary" gutterBottom>
-              Since starting and graduating Texas A&M University with my
-              Bachelor's of Science, I've been directly involed with a variety
-              of software engineering projects.
+              Since starting and graduating Texas A&M University with my BSc in
+              engineering, I've been directly involved with a variety of
+              software engineering projects. I currently work on numerous
+              interesting and meaningful projects on a daily basis.
             </Typography>
             <br></br>
             <Typography variant="body1" color="textSecondary" gutterBottom>

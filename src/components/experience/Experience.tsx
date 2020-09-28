@@ -171,6 +171,7 @@ export const Experience = () => {
               component="span"
               display={"inline"}
               color="textSecondary"
+              style={{ marginLeft: 10 }}
             >
               Where I've Worked
             </Typography>
