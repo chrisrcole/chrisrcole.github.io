@@ -78,10 +78,24 @@ function HideOnScroll(props: Props) {
   const trigger = useScrollTrigger();
 
   return (
-    <Slide appear={false} direction="down" in={!trigger}>
-      {children}
-    </Slide>
+    <ElevationScroll>
+      <Slide appear={false} direction="down" in={!trigger}>
+        {children}
+      </Slide>
+    </ElevationScroll>
   );
+}
+function ElevationScroll(props: Props) {
+  const { children } = props;
+
+  const trigger = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 0,
+  });
+
+  return React.cloneElement(children, {
+    elevation: trigger ? 4 : 0,
+  });
 }
 
 const NavItem = (props: { title: string; path: string; index: number }) => {
@@ -186,7 +200,7 @@ export const Navigation = (props: Props) => {
   return (
     <>
       <HideOnScroll {...props}>
-        <AppBar color="primary" elevation={0} className={classes.nav}>
+        <AppBar className={classes.nav}>
           <Toolbar>
             <div className={classes.title}>
               <img src={logo} alt="logo" className={classes.logo} />
