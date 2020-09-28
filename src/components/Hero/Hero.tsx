@@ -43,8 +43,9 @@ export const Hero = () => {
         </Grid>
         <Grid item xs={12} sm={6}>
           <Typography variant="subtitle1" color="textSecondary">
-            I'm a software engineer based in Houston, TX (yeehaw) who loves
-            building websites, applications, and everything in between.
+            I'm based in Houston, TX (yeehaw) who loves building websites,
+            applications, and everything in between. I really appreciate you
+            stopping by my website today!
           </Typography>
         </Grid>
         <Grid item xs={12}>
