@@ -8,6 +8,7 @@ import Fab from "@material-ui/core/Fab";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 
 import { Link } from "react-scroll";
+import { IconButton } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   hero: {
@@ -49,17 +50,20 @@ export const Hero = () => {
           </Typography>
         </Grid>
         <Grid item xs={12}>
-          <Link
-            activeClass="active"
-            to="#contact"
-            spy={true}
-            smooth={true}
-            duration={700}
+          <Button
+            href={`mailto:cccole3@gmail.com`}
+            color="secondary"
+            variant="outlined"
           >
-            <Button color="secondary" variant="outlined">
-              Let's Talk!
-            </Button>
-          </Link>
+            Let's Talk!
+          </Button>
+          <Button
+            href={`mailto:cccole3@gmail.com`}
+            color="secondary"
+            variant="outlined"
+          >
+            Let's Talk!
+          </Button>
         </Grid>
       </Grid>
       <div className={classes.down}>
