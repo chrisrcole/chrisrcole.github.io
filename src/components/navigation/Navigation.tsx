@@ -194,7 +194,7 @@ export const Navigation = (props: Props) => {
             <Hidden xsDown implementation="css">
               {navbar}
             </Hidden>
-            <IconButton
+            {/* <IconButton
               color="inherit"
               aria-label="open drawer"
               edge="start"
@@ -202,13 +202,13 @@ export const Navigation = (props: Props) => {
               className={classes.menuButton}
             >
               <MenuIcon />
-            </IconButton>
+            </IconButton> */}
           </Toolbar>
         </AppBar>
       </HideOnScroll>
       <Toolbar id="back-to-top-anchor" />
-      <nav className={classes.drawer} aria-label="mailbox folders">
-        {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
+      {/* <nav className={classes.drawer} aria-label="mailbox folders">
+        // The implementation can be swapped with js to avoid SEO duplication of links.
         <Hidden smUp implementation="css">
           <Drawer
             variant="temporary"
@@ -225,7 +225,7 @@ export const Navigation = (props: Props) => {
             {drawer}
           </Drawer>
         </Hidden>
-      </nav>
+      </nav> */}
     </>
   );
 };
