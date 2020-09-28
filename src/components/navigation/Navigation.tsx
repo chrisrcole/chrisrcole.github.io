@@ -145,6 +145,7 @@ export const Navigation = (props: Props) => {
         ))}
         <Button
           href={process.env.PUBLIC_URL + "/ChrisCole-Resume.pdf"}
+          target="_blank"
           color="secondary"
           variant="outlined"
         >
@@ -190,6 +191,7 @@ export const Navigation = (props: Props) => {
         <ListItem>
           <Button
             href={process.env.PUBLIC_URL + "/ChrisCole-Resume.pdf"}
+            target="_blank"
             color="secondary"
             variant="outlined"
           >
