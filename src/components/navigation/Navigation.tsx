@@ -20,6 +20,8 @@ import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
 
 import { Link } from "react-scroll";
 
+import { Social } from "./Social";
+
 const links = [
   { title: "About", path: "#about" },
   { title: "Experience", path: "#experience" },
@@ -44,6 +46,7 @@ const useStyles = makeStyles((theme: Theme) =>
       paddingTop: 10,
       opacity: 0.9,
       backdropFilter: "blur(6px)",
+      zIndex: theme.zIndex.drawer + 1,
     },
     navLinks: {
       marginRight: 10,
@@ -221,6 +224,7 @@ export const Navigation = (props: Props) => {
         </AppBar>
       </HideOnScroll>
       <Toolbar id="back-to-top-anchor" />
+      <Social />
       {/* <nav className={classes.drawer} aria-label="mailbox folders">
         // The implementation can be swapped with js to avoid SEO duplication of links.
         <Hidden smUp implementation="css">
