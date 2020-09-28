@@ -12,7 +12,7 @@ import IconButton from "@material-ui/core/IconButton";
 const icons = [
   {
     icon: <GitHubIcon />,
-    link: "https://github.com/cccole3",
+    link: "https://github.com/chrisrcole",
   },
   {
     icon: <LinkedInIcon />,
