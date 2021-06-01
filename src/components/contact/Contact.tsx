@@ -56,7 +56,7 @@ export const Contact = () => {
             </Typography>
             <br></br>
             <Typography variant="body1" color="textSecondary" gutterBottom>
-              I'm currently looking for new opportunities, my inbox is always
+              I'm not currently looking for new opportunities, but my inbox is always
               open. Whether you have a question or just want to say hi, I'll get
               back to you as soon as possible!
             </Typography>
