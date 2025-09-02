@@ -64,21 +64,21 @@ export const About = () => {
         <Grid container className={classes.section}>
           <Grid item xs={12} sm={6}>
             <Typography variant="body1" color="textSecondary" gutterBottom>
-              Hello! I'm Chris, a software engineer based in Houston, TX.
+              Hello! I'm Chris, a reservoir engineer based in Houston, TX.
             </Typography>
             <br></br>
             <Typography variant="body1" color="textSecondary" gutterBottom>
-              I enjoy creating things that live on the internet, whether that be
-              websites, applications, or anything in between. My goal is to
-              always build products that provide user-centered, performant
+              I enjoy creating things, whether that be websites, applications,
+              spreadsheets or anything in between. My goal is to always build
+              value creating tools that provide user-centered, performant
               experiences.
             </Typography>
             <br></br>
             <Typography variant="body1" color="textSecondary" gutterBottom>
               Since starting and graduating Texas A&M University with my BSc in
               engineering, I've been directly involved with a variety of
-              software engineering projects. I currently work on numerous
-              interesting and meaningful projects on a daily basis.
+              engineering projects. I currently work on numerous interesting and
+              meaningful projects on a daily basis.
             </Typography>
             <br></br>
             <Typography variant="body1" color="textSecondary" gutterBottom>

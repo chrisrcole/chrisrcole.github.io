@@ -39,14 +39,14 @@ export const Hero = () => {
         </Grid>
         <Grid item xs={12}>
           <Typography variant="h2" color="textSecondary">
-            I'm a Software Engineer.
+            I'm a Reservoir Engineer.
           </Typography>
         </Grid>
         <Grid item xs={12} sm={6}>
           <Typography variant="subtitle1" color="textSecondary">
-            Petroleum Engineer turned software engineer from Houston, TX
-            (yeehaw) who loves building websites, applications, and everything
-            in between. I really appreciate you stopping by my website today!
+            Petroleum Engineer from Houston, TX (yeehaw) who enjoys building
+            spreadsheets, tools, applications, and everything in between. I
+            appreciate you stopping by my website today!
           </Typography>
         </Grid>
         <Grid item xs={12}>
