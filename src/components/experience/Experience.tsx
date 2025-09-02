@@ -61,7 +61,7 @@ const StyledTab = withStyles((theme: Theme) =>
   createStyles({
     root: {
       textTransform: "none",
-      fontWeight: theme.typography.fontWeightRegular,
+      fontWeight: Number(theme.typography.fontWeightRegular),
       fontSize: theme.typography.pxToRem(15),
       marginRight: theme.spacing(1),
       "&:focus": {
